@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Price Tracker</title>
+</head>
+<body>
+    <h1>Amazon Price Tracker</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form action="/add_product" method="POST">
+        <label for="url">Amazon Product URL:</label>
+        <input type="text" id="url" name="url" required><br><br>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <input type="submit" value="Track Price">
+    </form>
+</body>
+</html>
