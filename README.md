@@ -1,7 +1,7 @@
 # Amazon-Price-Tracker
 This is  a Simple Amazon price Tracker Build using Flask and Python Automation libraries
 
-## 1. clone the repo and open in vscode
+## 1. Clone the Repo and open in VSCode
 
 ## 2. First run these commands in terminal in vscode
 ```python
